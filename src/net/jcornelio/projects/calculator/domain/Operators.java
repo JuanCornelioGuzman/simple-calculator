@@ -26,11 +26,12 @@ public class Operators {
         populatePrecedence();
     }
     
+    /**
+     *
+     * @return
+     */
     public static Operators getInstance(){
-        if(opt==null){
-            opt = new Operators();
-        }
-        return opt;
+        return (opt==null) ? new Operators() : opt;
     }
     
     private void populatePrecedence(){
@@ -44,37 +45,72 @@ public class Operators {
         }
     }    
     
+    /**
+     *
+     * @param operator
+     */
     public void addToOperations(String operator){
         SimpleOperationFactory sof = new SimpleOperationFactory();
         operations.put(operator, sof.createOperation(operator));
     }
     
-    public void addToOperators(JButton opButton){
-        operators.put(opButton.getText(), opButton);
+    /**
+     *
+     * @param operatorBtn
+     */
+    public void addToOperators(JButton operatorBtn){
+        operators.put(operatorBtn.getText(), operatorBtn);
     }
     
+    /**
+     *
+     * @return
+     */
     public Collection<JButton> getAllOperators(){
         return operators.values();
     }
     
+    /**
+     *
+     * @return
+     */
     public Collection<String> getOperatorPrecedence(){
         return precedence.keySet();
     }
     
+    /**
+     *
+     * @param op
+     * @return
+     */
     public boolean containsOperator(String op){
         return operators.containsKey(op);
     }
     
-    public Integer getPrecedence(String op){
-        return precedence.get(op);
+    /**
+     *
+     * @param operator
+     * @return
+     */
+    public Integer getPrecedence(String operator){
+        return precedence.get(operator);
     }
     
+    /**
+     *
+     * @return
+     */
     public HashMap<String, Integer> getPrecedence(){
         return precedence;
     }
     
-    public Operation getOperation(String op){
-        return operations.get(op);
+    /**
+     *
+     * @param operator
+     * @return
+     */
+    public Operation getOperation(String operator){
+        return operations.get(operator);
     }
     
 }

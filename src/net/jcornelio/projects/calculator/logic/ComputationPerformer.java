@@ -14,6 +14,10 @@ public class ComputationPerformer {
     
     private static int index;
 
+    /**
+     *
+     * @param expression
+     */
     public static void calculateExpresion(String expression){
         ExpressionAnalyzer.getInstance().extractExpression(expression);
         parseCalculation();

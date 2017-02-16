@@ -43,6 +43,9 @@ public class CalculatorWindow extends JFrame {
     private JTextField txtScreen;    
     private CalculatorLayoutManager clm;
     
+    /**
+     *
+     */
     public CalculatorWindow() {
         instantiateComponents();
         setComponentProperties();        
@@ -127,6 +130,9 @@ public class CalculatorWindow extends JFrame {
         ButtonController.getInstance().disableButton(Constants.EQUALS_SIGN);
     }
     
+    /**
+     *
+     */
     public static void displayWindow() {
         /* Set the Nimbus look and feel */
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -152,30 +158,60 @@ public class CalculatorWindow extends JFrame {
         });
     }
              
+    /**
+     *
+     * @param index
+     * @return
+     */
     public JButton getBtnNumber(int index) {
         return btnNum[index];
     }
 
+    /**
+     *
+     * @param index
+     * @return
+     */
     public JButton getBtnOperator(int index) {
         return btnOperators[index];
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getBtnEqual() {
         return btnEqual;
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getBtnClear() {
         return btnClear;
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getBtnDot() {
         return btnDot;
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getBtnBackspace() {
         return btnBackspace;
     }
 
+    /**
+     *
+     * @return
+     */
     public JTextField getTxtScreen() {
         return txtScreen;
     }

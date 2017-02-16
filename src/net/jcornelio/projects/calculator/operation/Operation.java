@@ -7,6 +7,12 @@ package net.jcornelio.projects.calculator.operation;
  **************************************************/
 public interface Operation {
 
-	public double performCalculation(double num1, double num2);
+    /**
+     *
+     * @param num1
+     * @param num2
+     * @return
+     */
+    double performCalculation(double num1, double num2);
 	
 }

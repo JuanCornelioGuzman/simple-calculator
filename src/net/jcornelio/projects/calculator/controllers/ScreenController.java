@@ -14,6 +14,10 @@ public class ScreenController {
     
     private ScreenController() {}
     
+    /**
+     *
+     * @return
+     */
     public static ScreenController getInstance() {
         if(scmgr==null){
             scmgr = new ScreenController();
@@ -21,22 +25,42 @@ public class ScreenController {
         return scmgr;
     }
         
+    /**
+     *
+     * @param text
+     */
     public void display(String text){
         screen.setText(text);
     }
     
+    /**
+     *
+     * @param text
+     */
     public void concatToDisplay(String text){
         display(screen.getText().concat(text));
     }
     
+    /**
+     *
+     * @return
+     */
     public String getDisplayedText(){
         return screen.getText();
     }
     
+    /**
+     *
+     * @return
+     */
     public JTextField getScreen() {
         return screen;
     }
 
+    /**
+     *
+     * @param screen
+     */
     public void setControlledLabel(JTextField screen) {
         this.screen = screen;
     }

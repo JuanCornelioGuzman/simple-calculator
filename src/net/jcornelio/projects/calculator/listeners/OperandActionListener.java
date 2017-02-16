@@ -18,6 +18,10 @@ public class OperandActionListener implements ActionListener {
 
     private String text;
 
+    /**
+     *
+     * @param text
+     */
     public OperandActionListener(String text) {
         this.text = text;
     }

@@ -9,9 +9,15 @@ import net.jcornelio.projects.calculator.operation.*;
  **************************************************/
 public class SimpleOperationFactory {
 	
+    /**
+     * Creates an operation based on the given operator
+     * 
+     * @param operator
+     * @return created operator
+     */
     public Operation createOperation(String operator){
             
-        Operation operation = null;
+        Operation operation;
 
         if(Constants.OPERATOR[0].equals(operator)){
             operation = new MultiplicationOperation();

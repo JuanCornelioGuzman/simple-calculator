@@ -12,10 +12,17 @@ public class CalculatorLayoutManager {
     
     private CalculatorWindow calcGUI;
     
+    /**
+     *
+     * @param calcGUI
+     */
     public CalculatorLayoutManager(CalculatorWindow calcGUI) {
         this.calcGUI = calcGUI;
     }
     
+    /**
+     *
+     */
     public void performLayout(){
         GroupLayout layout = new GroupLayout(calcGUI.getContentPane());
         calcGUI.getContentPane().setLayout(layout);

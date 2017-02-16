@@ -9,6 +9,10 @@ import net.jcornelio.projects.calculator.gui.CalculatorWindow;
  **************************************************/
 public class MainCalculator {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         CalculatorWindow.displayWindow();
     }

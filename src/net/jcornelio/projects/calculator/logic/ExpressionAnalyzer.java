@@ -22,6 +22,10 @@ public class ExpressionAnalyzer {
         constructOperandRegEx();
     }
     
+    /**
+     *
+     * @return
+     */
     public static ExpressionAnalyzer getInstance(){
         if(expAnalyzer==null){
             expAnalyzer = new ExpressionAnalyzer();
@@ -29,6 +33,10 @@ public class ExpressionAnalyzer {
         return expAnalyzer;
     }
         
+    /**
+     *
+     * @param expr
+     */
     public void extractExpression(String expr){
         String[] opd = expr.split(operatorRegEx.toString());
         for(String i: opd){
@@ -47,12 +55,21 @@ public class ExpressionAnalyzer {
         System.out.println("Number of operators: "+Expression.getInstance().getOperators().size());
     }
     
+    /**
+     *
+     * @param token
+     */
     public void addToOperatorRegEx(String token){
         operatorRegEx.insert(operatorRegEx.toString().indexOf(Constants.CLOSE_BRACKET), Constants.BACKSLASH+token);
         System.out.println(Constants.BACKSLASH+token+" was added to the REGEX");
         System.out.println("REGEX value is now: "+operatorRegEx.toString());
     }
     
+    /**
+     *
+     * @param operator
+     * @return
+     */
     public boolean isValidOperator(String operator){
         Pattern pattern = Pattern.compile(operatorRegEx.toString());
         Matcher matcher = pattern.matcher(operator);

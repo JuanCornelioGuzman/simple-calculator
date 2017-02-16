@@ -7,7 +7,13 @@ package net.jcornelio.projects.calculator.operation;
  **************************************************/
 public class DivisionOperation implements Operation{
 
-	@Override
+    /**
+     *
+     * @param num1
+     * @param num2
+     * @return
+     */
+    @Override
 	public double performCalculation(double num1, double num2) {
 		return num1/num2;
 	}

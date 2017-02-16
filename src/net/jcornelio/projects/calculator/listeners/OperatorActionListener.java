@@ -18,6 +18,10 @@ public class OperatorActionListener implements ActionListener{
 
     private String operation;
 
+    /**
+     *
+     * @param operation
+     */
     public OperatorActionListener(String operation) {
         System.out.println("OperatorActionListener was added to "+operation+" button.");
         this.operation = operation;
